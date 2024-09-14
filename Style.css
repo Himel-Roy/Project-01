@@ -14,16 +14,25 @@ body{
 .card{
     height: 350px;
     width:250px;
-    background: white;
+    /* background: white; */
     margin: 30px;
     border-radius:10px ;
     position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    perspective: 1000px;
 }
 .card-inner{
     height: 100%;
     width: 100%;
+    transition:  1s;
+    transform-style: preserve-3d;
 }
-.card-front{
+.card-inner .card-front{
+    position: absolute;
+    backface-visibility: hidden;
     height: 100%;
     width: 100%;
     background: url(Asset/Image/image1.jpg);
@@ -67,4 +76,18 @@ body{
     background-color: rgba(0, 255, 255, 0.39);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.39) ;
     transition:all .2s ease-in-out;
+}
+.card-inner .card-back{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    
+}
+.card:hover .card-inner{
+    transform:rotateY(180deg) ;
+    transition:  .5s;
 }
