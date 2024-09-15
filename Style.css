@@ -80,13 +80,107 @@ body{
 .card-inner .card-back{
     height: 100%;
     width: 100%;
+    background: url(Asset/Image/2150937419.jpg);
+    background-position: center center;
     border-radius: 10px;
     position: absolute;
     backface-visibility: hidden;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transform: rotateY(180deg);
-    
 }
+.card-inner .card-back .card-bacck-in{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(46, 46, 46, 0.322);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card-inner .card-back .card-bacck-in h1{
+    color: white;
+}
+.card-inner .card-back .card-bacck-in p{
+    text-align: center;
+    padding: 0 15px;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+.card-bacck-in .stat{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.card-bacck-in .stat .col{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-bacck-in .stat .col::after{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 2px;
+    margin-left: 80px;
+    background: white;
+}
+.card-bacck-in .stat .col:last-child::after{
+    display: none;
+}
+.card-bacck-in .stat .col h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+.social-icon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 30px;
+}
+.social-icon > .icon{
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+.social-icon .icon a{
+    color:white;
+    /* #34BC54 */
+}
+.social-icon .icon .bx{
+    font-size: 24px;
+}
+.social-icon .linkedin:hover{
+    border: 1px solid #0077B5;
+    transition: all .3s ease-in-out
+}
+.social-icon .linkedin:hover .bx{
+    color:#0077B5 ;
+    transition: all .3s ease-in-out
+}
+.social-icon .github:hover{
+    border: 1px solid #34BC54;
+    transition: all .3s ease-in-out
+}
+.social-icon .github:hover .bx{
+    color:#34BC54 ;
+    transition: all .3s ease-in-out
+}
+
+
 .card:hover .card-inner{
     transform:rotateY(180deg) ;
     transition:  .5s;
